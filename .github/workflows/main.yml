@@ -5,14 +5,12 @@ jobs:
     runs-on: 
       ubuntu-latest
     steps:
-      - name: Setup
-        run: make setup
-      - name: Start
-        run: make start
-      - name: Test
-        run: make test
-      - name: Lint
-        run: make lint
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - run: make setup
+      - run: make test
+      - run: make lint
+        
       
           
         
