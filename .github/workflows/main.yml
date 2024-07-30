@@ -1,0 +1,19 @@
+name: testing app
+on: push
+jobs:
+  build:
+    runs-on: 
+      ubuntu-latest
+    steps:
+      - name: Setup
+        run: make setup
+      - name: Start
+        run: make start
+      - name: Test
+        run: make test
+      - name: Lint
+        run: make lint
+      
+          
+        
+      
